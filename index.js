@@ -1,3 +1,5 @@
 var Docker = require('dockerode');
 var docker = new Docker({socketPath: '/var/run/docker.sock'});
-console.log(docker.listImages())
+docker.listImages().then(res=>{
+  console.log(res)
+})
